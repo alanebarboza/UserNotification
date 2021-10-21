@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UserNotification.Application</name>
+    </assembly>
+    <members>
+        <member name="M:UserNotification.Application.Controllers.UsersController.DoLogin(UserNotification.Domain.Commands.LoginCommand)">
+            <summary>
+            Login do Usuário
+            </summary>
+            <returns>Se login efetuado com sucesso.</returns>
+            <response code="200">Login efetuado com sucesso. Em ObjectResult populado com o objecto de Users.</response>
+            <response code="204">Usuário ou Senha inválidos.</response>
+        </member>
+        <member name="M:UserNotification.Application.Controllers.UsersController.Insert(UserNotification.Domain.Commands.CreateUserCommand)">
+            <summary>
+            Inclusão do Usuário
+            </summary>
+            <returns>Se usuário cadastrado com sucesso.</returns>
+            <response code="200">Usuário cadastrado com sucesso.</response>
+        </member>
+        <member name="M:UserNotification.Application.Controllers.UsersController.Update(UserNotification.Domain.Commands.UpdateUserCommand)">
+            <summary>
+            Atualização dos dados do Usuário
+            </summary>
+            <returns>Se o Usuário foi cadastrado.</returns>
+            <response code="200">Usuário alterado com sucesso.</response>
+            <response code="204">Usuário não existe.</response>
+        </member>
+        <member name="M:UserNotification.Application.Controllers.UsersController.Delete(UserNotification.Domain.Commands.IdCommand)">
+            <summary>
+            Exclusão do Usuário
+            </summary>
+            <returns>Se o Usuário excluído.</returns>
+            <response code="200">Usuário excluído com sucesso.</response>
+            <response code="204">Usuário não existe.</response>
+        </member>
+        <member name="M:UserNotification.Application.Controllers.UsersController.Select">
+            <summary>
+            Consulta de Usuários
+            </summary>
+            <returns>Lista de Usuários cadastrados.</returns>
+            <response code="200">Lista de Users</response>
+        </member>
+        <member name="M:UserNotification.Application.Controllers.UsersController.Select(System.Int32)">
+            <summary>
+            Consulta de Usuário específico
+            </summary>
+            <returns>Usuário cadastrado.</returns>
+            <response code="200">Objeto de Users</response>
+        </member>
+    </members>
+</doc>
