@@ -19,6 +19,7 @@
 ### Features (Versão 2.0) 
 - [ ] Fluent Validation
 - [ ] JWT Token
+- [ ] Filters
 - [ ] Envio de Email das Notificações
 - [ ] Mensageria (RabbitMQ)
 
