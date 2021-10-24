@@ -20,7 +20,7 @@
 - [ ] Fluent Validation
 - [ ] JWT Token
 - [ ] Envio de Email das Notificações
-- [ ] Mensageria
+- [ ] Mensageria (RabbitMQ)
 
 
 
