@@ -46,7 +46,7 @@ namespace UserNotification.Infra.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("PassWord")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Phone")
                         .HasMaxLength(15)
