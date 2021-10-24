@@ -21,7 +21,7 @@ namespace UserNotification.Infra.Repositories
 
         public async Task<Users> DoLogin(LoginCommand loginCommand)
         {
-            Users user = await _sqlDbContext.Set<Users>().AsNoTracking().FirstOrDefaultAsync(x => x.Nick == loginCommand.Nick && x.PassWord == loginCommand.PassWord);
+            Users user = await _sqlDbContext.Set<Users>().FirstOrDefaultAsync(x => x.Nick == loginCommand.Nick && x.PassWord == loginCommand.PassWord);
             if (user == null) return user;
             foreach (var child in childList)
             {
