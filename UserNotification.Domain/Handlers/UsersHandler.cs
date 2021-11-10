@@ -23,7 +23,7 @@ namespace UserNotification.Domain.Handlers
         public async Task<ICommand> Handle(LoginCommand loginCommand)
         {
             Users user = await _usersRepository.DoLogin(loginCommand);
-            return new CommandResultObject<Users>((user != null ? 200 : 204), new List<string>() { (user != null ? "Login efetuado com sucesso." : "Usuário ou Senha inválidos.") }, user);
+            return new CommandResultObject<Users>((user != null ? 200 : 400), new List<string>() { (user != null ? "Login efetuado com sucesso." : "Usuário ou Senha inválidos.") }, user);
         }
 
         public async Task<ICommand> Handle(CreateUserCommand createUserCommand)
@@ -51,7 +51,7 @@ namespace UserNotification.Domain.Handlers
                 return new CommandResult(200, new List<string>() { "Usuário alterado com sucesso." });
             }
             else
-                return new CommandResult(204, new List<string>() { "Usuário não existe." });
+                return new CommandResult(400, new List<string>() { "Usuário não existe." });
         }
 
         public async Task<ICommand> Handle(IdCommand removeUserCommand)
@@ -62,7 +62,7 @@ namespace UserNotification.Domain.Handlers
                 return new CommandResult(200, new List<string>() { "Usuário excluído com sucesso." });
             }
             else
-                return new CommandResult(204, new List<string>() { "Usuário não existe." });
+                return new CommandResult(400, new List<string>() { "Usuário não existe." });
         }
     }
 }
