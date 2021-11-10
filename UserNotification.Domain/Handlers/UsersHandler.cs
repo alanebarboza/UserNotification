@@ -12,7 +12,7 @@ namespace UserNotification.Domain.Handlers
 {
     public class UsersHandler : IHandler<LoginCommand>, IHandler<CreateUserCommand>, IHandler<UpdateUserCommand>, IHandler<IdCommand>
     {
-        private IUsersRepository _usersRepository;
+        private readonly IUsersRepository _usersRepository;
         private readonly ICollection<string> childList = new Collection<string>() { "UsersNotifications" };
 
         public UsersHandler(IUsersRepository usersRepository)
