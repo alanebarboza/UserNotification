@@ -25,7 +25,7 @@ namespace UserNotification.Application.Controllers
         /// </summary>
         /// <returns>Se login efetuado com sucesso.</returns>
         /// <response code="200">Login efetuado com sucesso. Em ObjectResult populado com o objecto de Users.</response>
-        /// <response code="204">Usuário ou Senha inválidos.</response>
+        /// <response code="400">Usuário ou Senha inválidos.</response>
         [HttpPost("DoLogin")]
         public async Task<IActionResult> DoLogin([FromBody] LoginCommand loginCommand) => Ok(await _userServices.DoLogin(loginCommand));
 
@@ -42,7 +42,7 @@ namespace UserNotification.Application.Controllers
         /// </summary>
         /// <returns>Se o Usuário foi cadastrado.</returns>
         /// <response code="200">Usuário alterado com sucesso.</response>
-        /// <response code="204">Usuário não existe.</response>
+        /// <response code="400">Usuário não existe.</response>
         [HttpPost("Update")]
         public async Task<IActionResult> Update([FromBody] UpdateUserCommand updateUserCommand) =>Ok(await _userServices.Update(updateUserCommand));
 
@@ -51,7 +51,7 @@ namespace UserNotification.Application.Controllers
         /// </summary>
         /// <returns>Se o Usuário excluído.</returns>
         /// <response code="200">Usuário excluído com sucesso.</response>
-        /// <response code="204">Usuário não existe.</response>
+        /// <response code="400">Usuário não existe.</response>
         [HttpPost("Delete")]
         public async Task<IActionResult> Delete([FromBody] IdCommand removeUserCommand) => Ok(await _userServices.Delete(removeUserCommand));
 
