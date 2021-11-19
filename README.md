@@ -11,7 +11,7 @@
 
 - [x] CRUD - Usuario/Notificações
 - [x] DDD - Domain Driven Design
-- [x] Design Pattern - Handlers
+- [x] Patterns - Handlers (CQRS)
 - [x] SOLID
 - [x] Entity Framework
 - [x] Migration auto-start
